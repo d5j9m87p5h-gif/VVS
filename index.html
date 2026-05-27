@@ -3,178 +3,41 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<meta name="description" content="Marnfeld Teknik & Rådgivning tilbyder uvildig teknisk rådgivning, drifts- og vedligeholdelsesplaner, brandtætning, miljøkortlægning og renoveringskontrol til ejendomsselskaber, ejerforeninger og andelsboligforeninger.">
-<meta name="robots" content="index, follow">
-
-<meta property="og:title" content="Marnfeld Teknik & Rådgivning">
-<meta property="og:description" content="Uvildig teknisk rådgivning til ejendomme, foreninger og administratorer.">
-<meta property="og:type" content="website">
-<meta property="og:locale" content="da_DK">
-
-<title>Marnfeld Teknik & Rådgivning</title>
-
+<title>Marnfeld Teknik & Rådgivning – Uvildig teknisk rådgivning</title>
+<meta name="description" content="Uvildig teknisk rådgivning til ejendomsselskaber, ejer- og andelsboligforeninger. Driftsplaner, miljøkortlægning, brandtætning og renoveringskontrol.">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="styles.css">
 <style>
-  *, *::before, *::after {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-
-  :root {
-    --navy: #1a2b3c;
-    --navy-light: #243447;
-    --gold: #c8a96e;
-    --gold-light: #e8c98e;
-    --cream: #f8f5f0;
-    --text: #2c3e50;
-    --text-muted: #6b7a8d;
-    --white: #ffffff;
-    --border: rgba(200,169,110,0.25);
-  }
-
-  html {
-    scroll-behavior: smooth;
-  }
-
-  body {
-    font-family: 'DM Sans', sans-serif;
-    color: var(--text);
-    background: var(--cream);
-    overflow-x: hidden;
-  }
-
-  nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 100;
-    background: rgba(26,43,60,0.97);
-    backdrop-filter: blur(8px);
-    padding: 0 4rem;
-    height: 64px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-bottom: 1px solid rgba(200,169,110,0.2);
-  }
-
-  .nav-logo {
-    font-family: 'Playfair Display', serif;
-    color: var(--gold);
-    font-size: 1.15rem;
-    letter-spacing: 0.02em;
-  }
-
-  .nav-logo span {
-    color: var(--white);
-    font-weight: 400;
-  }
-
-  .nav-links {
-    display: flex;
-    gap: 2rem;
-    list-style: none;
-  }
-
-  .nav-links a {
-    color: rgba(255,255,255,0.75);
-    text-decoration: none;
-    font-size: 0.85rem;
-    font-weight: 400;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    transition: color 0.2s;
-  }
-
-  .nav-links a:hover {
-    color: var(--gold);
-  }
-
-  .mobile-menu-toggle {
-    display: none;
-    background: transparent;
-    border: 1px solid rgba(200,169,110,0.45);
-    color: var(--gold);
-    width: 42px;
-    height: 38px;
-    font-size: 1.25rem;
-    cursor: pointer;
-  }
-
-  .nav-cta {
-    background: transparent;
-    border: 1px solid var(--gold);
-    color: var(--gold);
-    padding: 8px 20px;
-    font-size: 0.82rem;
-    font-family: 'DM Sans', sans-serif;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-
-  .nav-cta:hover {
-    background: var(--gold);
-    color: var(--navy);
-  }
-
+  /* HERO – kun på forsiden */
   .hero {
     min-height: 100vh;
     background: var(--navy);
-    display: flex;
-    align-items: center;
+    display: flex; align-items: center;
     position: relative;
     overflow: hidden;
     padding: 8rem 4rem 4rem;
   }
-
   .hero::before {
     content: '';
-    position: absolute;
-    inset: 0;
+    position: absolute; inset: 0;
     background: radial-gradient(ellipse at 70% 50%, rgba(200,169,110,0.08) 0%, transparent 60%);
   }
-
   .hero-grid {
-    position: absolute;
-    inset: 0;
-    background-image:
-      linear-gradient(rgba(200,169,110,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(200,169,110,0.04) 1px, transparent 1px);
+    position: absolute; inset: 0;
+    background-image: linear-gradient(rgba(200,169,110,0.04) 1px, transparent 1px),
+                      linear-gradient(90deg, rgba(200,169,110,0.04) 1px, transparent 1px);
     background-size: 60px 60px;
   }
-
-  .hero-content {
-    max-width: 680px;
-    position: relative;
-    z-index: 2;
-  }
-
+  .hero-content { max-width: 680px; position: relative; z-index: 2; }
   .hero-eyebrow {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--gold);
-    font-size: 0.8rem;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    margin-bottom: 1.5rem;
-    font-weight: 500;
+    display: inline-flex; align-items: center; gap: 10px;
+    color: var(--gold); font-size: 0.8rem; letter-spacing: 0.12em;
+    text-transform: uppercase; margin-bottom: 1.5rem; font-weight: 500;
   }
-
   .hero-eyebrow::before {
-    content: '';
-    display: block;
-    width: 32px;
-    height: 1px;
-    background: var(--gold);
+    content: ''; display: block;
+    width: 32px; height: 1px; background: var(--gold);
   }
-
   .hero h1 {
     font-family: 'Playfair Display', serif;
     font-size: clamp(2.4rem, 4vw, 3.6rem);
@@ -183,697 +46,303 @@
     margin-bottom: 1.5rem;
     font-weight: 700;
   }
-
-  .hero h1 em {
-    font-style: italic;
-    color: var(--gold);
-  }
-
+  .hero h1 em { font-style: italic; color: var(--gold); }
   .hero p {
-    font-size: 1.05rem;
-    color: rgba(255,255,255,0.65);
-    line-height: 1.8;
-    margin-bottom: 2.5rem;
-    font-weight: 300;
+    font-size: 1.05rem; color: rgba(255,255,255,0.65);
+    line-height: 1.8; margin-bottom: 2.5rem; font-weight: 300;
     max-width: 520px;
   }
-
-  .hero-btns {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-  }
-
-  .btn-primary {
-    background: var(--gold);
-    color: var(--navy);
-    padding: 14px 32px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.88rem;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    transition: all 0.2s;
-    text-decoration: none;
-    display: inline-block;
-  }
-
-  .btn-primary:hover {
-    background: var(--gold-light);
-  }
-
-  .btn-outline {
-    background: transparent;
-    color: var(--white);
-    padding: 14px 32px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.88rem;
-    font-weight: 400;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    border: 1px solid rgba(255,255,255,0.3);
-    cursor: pointer;
-    transition: all 0.2s;
-    text-decoration: none;
-    display: inline-block;
-  }
-
-  .btn-outline:hover {
-    border-color: var(--white);
-  }
-
+  .hero-btns { display: flex; gap: 1rem; flex-wrap: wrap; }
   .hero-stats {
-    position: absolute;
-    bottom: 3rem;
-    right: 4rem;
-    display: flex;
-    gap: 3rem;
-    z-index: 2;
+    position: absolute; bottom: 3rem; right: 4rem;
+    display: flex; gap: 3rem; z-index: 2;
   }
-
-  .stat {
-    text-align: right;
-  }
-
+  .stat { text-align: right; }
   .stat-num {
     font-family: 'Playfair Display', serif;
-    font-size: 2.4rem;
-    color: var(--gold);
-    line-height: 1;
+    font-size: 2.4rem; color: var(--gold); line-height: 1;
     display: block;
   }
-
   .stat-label {
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.45);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    display: block;
-    margin-top: 4px;
+    font-size: 0.75rem; color: rgba(255,255,255,0.45);
+    letter-spacing: 0.08em; text-transform: uppercase;
+    display: block; margin-top: 4px;
   }
 
-  section {
+  /* TRUST STRIP */
+  .trust-strip {
+    background: var(--white);
+    padding: 2.5rem 4rem;
+    border-bottom: 1px solid rgba(200,169,110,0.15);
+  }
+  .trust-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 12px;
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    font-weight: 400;
+  }
+  .trust-item::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--gold); flex-shrink: 0;
+    transform: rotate(45deg);
+  }
+
+  /* INTRO / VÆRDISTOF */
+  .intro {
+    background: var(--white);
     padding: 6rem 4rem;
   }
-
-  .section-label {
-    display: inline-flex;
-    align-items: center;
-    gap: 10px;
-    color: var(--gold);
-    font-size: 0.78rem;
-    letter-spacing: 0.14em;
-    text-transform: uppercase;
-    margin-bottom: 1rem;
-    font-weight: 500;
+  .intro-inner {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
   }
-
-  .section-label::before {
-    content: '';
-    width: 24px;
-    height: 1px;
-    background: var(--gold);
-  }
-
-  .section-title {
+  .intro p.lead {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-size: clamp(1.3rem, 2vw, 1.7rem);
     color: var(--navy);
-    line-height: 1.2;
-    margin-bottom: 1rem;
-    font-weight: 700;
+    line-height: 1.5;
+    font-weight: 400;
+    font-style: italic;
+    margin-top: 1.5rem;
   }
+  .intro p.lead em { color: var(--gold); }
 
-  .section-title.light {
-    color: var(--white);
+  /* YDELSER TEASER */
+  .services-teaser {
+    background: var(--cream);
+    padding: 6rem 4rem;
   }
-
-  .section-sub {
-    font-size: 1rem;
-    color: var(--text-muted);
-    line-height: 1.8;
-    max-width: 580px;
-    font-weight: 300;
+  .services-teaser-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 3rem;
+    gap: 2rem;
+    flex-wrap: wrap;
   }
-
-  .section-sub.light {
-    color: rgba(255,255,255,0.55);
-  }
-
-  .services {
-    background: var(--white);
-  }
-
-  .services-header {
-    margin-bottom: 3.5rem;
-  }
-
-  .services-grid {
+  .services-teaser-header > div { max-width: 560px; }
+  .services-teaser-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 1.5px;
     background: var(--border);
     border: 1.5px solid var(--border);
   }
-
-  .service-card {
+  .teaser-card {
     background: var(--white);
     padding: 2.5rem;
-    transition: background 0.3s;
-    cursor: default;
-  }
-
-  .service-card:hover {
-    background: #fafaf8;
-  }
-
-  .service-icon {
-    width: 44px;
-    height: 44px;
-    border: 1px solid var(--border);
+    transition: all 0.3s;
+    position: relative;
     display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    color: var(--gold);
-    font-size: 1.2rem;
+    flex-direction: column;
   }
-
-  .service-card h3 {
+  .teaser-card:hover { background: #fafaf8; }
+  .teaser-card .num {
     font-family: 'Playfair Display', serif;
-    font-size: 1.15rem;
-    color: var(--navy);
-    margin-bottom: 0.75rem;
-    font-weight: 700;
-  }
-
-  .service-card p {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-    line-height: 1.75;
-    font-weight: 300;
-  }
-
-  .service-num {
-    font-family: 'Playfair Display', serif;
-    font-size: 0.8rem;
-    color: var(--gold);
-    letter-spacing: 0.1em;
-    margin-bottom: 1rem;
+    font-size: 0.8rem; color: var(--gold);
+    letter-spacing: 0.1em; margin-bottom: 1rem;
     display: block;
   }
-
-  .scenarios {
-    background: var(--navy);
+  .teaser-icon {
+    width: 44px; height: 44px;
+    border: 1px solid var(--border);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 1.5rem;
+    color: var(--gold); font-size: 1.2rem;
   }
-
-  .scenarios-header {
-    margin-bottom: 3.5rem;
+  .teaser-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem; color: var(--navy);
+    margin-bottom: 0.6rem; font-weight: 700;
   }
-
-  .scenarios-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1rem;
+  .teaser-card p {
+    font-size: 0.88rem; color: var(--text-muted);
+    line-height: 1.7; font-weight: 300;
+    flex: 1;
   }
-
-  .scenario-card {
-    border: 1px solid rgba(200,169,110,0.2);
-    padding: 2rem;
-    transition: border-color 0.3s;
-  }
-
-  .scenario-card:hover {
-    border-color: rgba(200,169,110,0.5);
-  }
-
-  .scenario-tag {
-    display: inline-block;
-    background: rgba(200,169,110,0.1);
+  .teaser-card .arrow {
+    margin-top: 1.2rem;
     color: var(--gold);
-    font-size: 0.72rem;
+    font-size: 0.78rem;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    padding: 4px 10px;
-    margin-bottom: 1.2rem;
+    transition: gap 0.2s;
+    display: inline-flex; align-items: center; gap: 8px;
   }
+  .teaser-card:hover .arrow { gap: 14px; }
 
-  .scenario-card h3 {
-    font-family: 'Playfair Display', serif;
-    font-size: 1.05rem;
-    color: var(--white);
-    margin-bottom: 0.75rem;
-    font-weight: 700;
-  }
-
-  .scenario-card p {
-    font-size: 0.87rem;
-    color: rgba(255,255,255,0.5);
-    line-height: 1.7;
-    font-weight: 300;
-    margin-bottom: 1rem;
-  }
-
-  .scenario-consequence {
-    border-top: 1px solid rgba(200,169,110,0.15);
-    padding-top: 1rem;
-    margin-top: 0.5rem;
-  }
-
-  .scenario-consequence p {
-    font-size: 0.82rem;
-    color: rgba(200,169,110,0.8);
-    line-height: 1.6;
-    margin: 0;
-  }
-
-  .about {
-    background: var(--cream);
-  }
-
-  .about-inner {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
-  }
-
-  .about-img {
-    background: var(--navy-light);
-    aspect-ratio: 4/5;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  /* RISK TEASER */
+  .risk-teaser {
+    background: var(--navy);
+    padding: 6rem 4rem;
     position: relative;
     overflow: hidden;
   }
-
-  .about-img::after {
+  .risk-teaser::before {
     content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 40%;
-    background: linear-gradient(transparent, rgba(26,43,60,0.6));
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 20% 80%, rgba(200,169,110,0.06) 0%, transparent 60%);
+    pointer-events: none;
   }
-
-  .about-img-placeholder {
-    color: rgba(255,255,255,0.2);
-    font-family: 'Playfair Display', serif;
-    font-size: 1rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+  .risk-teaser-inner { position: relative; z-index: 2; }
+  .risk-teaser-header {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 3rem;
   }
-
-  .about-img-name {
-    position: absolute;
-    bottom: 1.5rem;
-    left: 1.5rem;
-    z-index: 2;
+  .risk-teaser-header .section-sub { margin: 1rem auto 0; }
+  .risk-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1rem;
+    margin-bottom: 3rem;
   }
-
-  .about-img-name strong {
-    display: block;
-    font-family: 'Playfair Display', serif;
-    color: var(--white);
-    font-size: 1.3rem;
+  .risk-card {
+    border: 1px solid rgba(200,169,110,0.2);
+    padding: 1.8rem;
+    transition: border-color 0.3s;
   }
-
-  .about-img-name span {
+  .risk-card:hover { border-color: rgba(200,169,110,0.5); }
+  .risk-tag {
+    display: inline-block;
+    background: rgba(200,169,110,0.1);
     color: var(--gold);
-    font-size: 0.8rem;
-    letter-spacing: 0.06em;
+    font-size: 0.7rem; letter-spacing: 0.1em;
+    text-transform: uppercase; padding: 4px 10px;
+    margin-bottom: 1rem;
+  }
+  .risk-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem; color: var(--white);
+    margin-bottom: 0.6rem; font-weight: 700;
+  }
+  .risk-card p {
+    font-size: 0.85rem; color: rgba(255,255,255,0.5);
+    line-height: 1.6; font-weight: 300;
+  }
+  .risk-cta {
+    text-align: center;
   }
 
-  .about-content .section-title {
-    margin-bottom: 1.5rem;
-  }
-
-  .about-content p {
-    font-size: 0.95rem;
-    color: var(--text-muted);
-    line-height: 1.85;
-    font-weight: 300;
-    margin-bottom: 1.5rem;
-  }
-
-  .credentials {
-    display: flex;
-    flex-direction: column;
-    gap: 0.6rem;
-    margin-top: 2rem;
-  }
-
-  .credential {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    font-size: 0.87rem;
-    color: var(--text-muted);
-  }
-
-  .credential::before {
-    content: '';
-    width: 6px;
-    height: 6px;
-    background: var(--gold);
-    flex-shrink: 0;
-    transform: rotate(45deg);
-  }
-
-  .portal {
+  /* ABOUT TEASER */
+  .about-teaser {
     background: var(--cream);
     padding: 6rem 4rem;
   }
-
-  .portal-inner {
+  .about-teaser-inner {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1.2fr;
     gap: 5rem;
     align-items: center;
   }
-
-  .contact {
-    background: var(--navy);
+  .about-teaser-img {
+    background: var(--navy-light);
+    aspect-ratio: 4/5;
+    display: flex; align-items: flex-end;
+    position: relative;
+    overflow: hidden;
+    padding: 1.5rem;
   }
-
-  .contact-inner {
+  .about-teaser-img::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%);
+  }
+  .about-teaser-img::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 30% 30%, rgba(200,169,110,0.15), transparent 60%);
+  }
+  .about-img-name {
+    position: relative; z-index: 2;
+  }
+  .about-img-name strong {
+    display: block; font-family: 'Playfair Display', serif;
+    color: var(--white); font-size: 1.3rem;
+  }
+  .about-img-name span {
+    color: var(--gold); font-size: 0.8rem; letter-spacing: 0.06em;
+  }
+  .about-teaser-content p {
+    font-size: 0.98rem; color: var(--text-muted);
+    line-height: 1.85; font-weight: 300; margin-bottom: 1.2rem;
+  }
+  .credentials-mini {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: start;
+    gap: 0.6rem;
+    margin: 1.8rem 0;
   }
-
-  .contact-info p {
-    font-size: 0.95rem;
-    color: rgba(255,255,255,0.5);
-    line-height: 1.8;
-    font-weight: 300;
-    margin-bottom: 2.5rem;
+  .credential-mini {
+    display: flex; align-items: center; gap: 10px;
+    font-size: 0.84rem; color: var(--text);
   }
-
-  .contact-detail {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-
-  .contact-detail-icon {
-    width: 36px;
-    height: 36px;
-    border: 1px solid rgba(200,169,110,0.3);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gold);
-    font-size: 0.9rem;
-    flex-shrink: 0;
-  }
-
-  .contact-detail span,
-  .contact-detail a {
-    color: rgba(255,255,255,0.7);
-    font-size: 0.9rem;
-    text-decoration: none;
-  }
-
-  .contact-detail a:hover {
-    color: var(--gold);
-  }
-
-  .contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .form-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1rem;
-  }
-
-  .form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 6px;
-  }
-
-  .form-group label {
-    font-size: 0.75rem;
-    color: rgba(255,255,255,0.4);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .form-group input,
-  .form-group textarea,
-  .form-group select {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(200,169,110,0.2);
-    color: var(--white);
-    padding: 12px 16px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 300;
-    outline: none;
-    transition: border-color 0.2s;
-    resize: none;
-  }
-
-  .form-group input:focus,
-  .form-group textarea:focus,
-  .form-group select:focus {
-    border-color: var(--gold);
-  }
-
-  .form-group select option {
-    background: var(--navy);
-  }
-
-  .form-submit {
-    background: var(--gold);
-    color: var(--navy);
-    border: none;
-    padding: 14px 32px;
-    font-family: 'DM Sans', sans-serif;
-    font-size: 0.88rem;
-    font-weight: 500;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    cursor: pointer;
-    transition: background 0.2s;
-    align-self: flex-start;
-  }
-
-  .form-submit:hover {
-    background: var(--gold-light);
-  }
-
-  a:focus-visible,
-  button:focus-visible,
-  input:focus-visible,
-  textarea:focus-visible,
-  select:focus-visible {
-    outline: 2px solid var(--gold);
-    outline-offset: 3px;
-  }
-
-  footer {
-    background: #111d27;
-    padding: 2rem 4rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    border-top: 1px solid rgba(200,169,110,0.15);
-  }
-
-  .footer-logo {
-    font-family: 'Playfair Display', serif;
-    color: var(--gold);
-    font-size: 1rem;
-  }
-
-  .footer-logo span {
-    color: rgba(255,255,255,0.4);
-    font-weight: 400;
-  }
-
-  footer p {
-    font-size: 0.78rem;
-    color: rgba(255,255,255,0.25);
-    letter-spacing: 0.04em;
-  }
-
-  @keyframes fadeUp {
-    from {
-      opacity: 0;
-      transform: translateY(24px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  .hero-content > * {
-    animation: fadeUp 0.7s ease both;
-  }
-
-  .hero-eyebrow {
-    animation-delay: 0.1s;
-  }
-
-  .hero h1 {
-    animation-delay: 0.2s;
-  }
-
-  .hero p {
-    animation-delay: 0.35s;
-  }
-
-  .hero-btns {
-    animation-delay: 0.5s;
-  }
-
-  .hero-stats {
-    animation-delay: 0.6s;
+  .credential-mini::before {
+    content: '';
+    width: 5px; height: 5px;
+    background: var(--gold); flex-shrink: 0;
+    transform: rotate(45deg);
   }
 
   @media (max-width: 900px) {
-    nav {
-      padding: 0 1.5rem;
-    }
-
-    .mobile-menu-toggle {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .nav-links {
-      display: none;
-      position: absolute;
-      top: 64px;
-      left: 0;
-      right: 0;
-      flex-direction: column;
-      gap: 0;
-      background: rgba(26,43,60,0.99);
-      border-bottom: 1px solid rgba(200,169,110,0.25);
-      padding: 0.75rem 1.5rem 1rem;
-    }
-
-    .nav-links.open {
-      display: flex;
-    }
-
-    .nav-links li {
-      border-bottom: 1px solid rgba(255,255,255,0.08);
-    }
-
-    .nav-links li:last-child {
-      border-bottom: 0;
-    }
-
-    .nav-links a {
-      display: block;
-      padding: 0.95rem 0;
-    }
-
-    .nav-cta {
-      display: none;
-    }
-
-    section {
-      padding: 4rem 1.5rem;
-    }
-
-    .hero {
-      padding: 6rem 1.5rem 10rem;
-    }
-
-    .hero-stats {
-      bottom: 2rem;
-      right: 1.5rem;
-      gap: 2rem;
-    }
-
-    .about-inner,
-    .contact-inner,
-    .portal-inner {
-      grid-template-columns: 1fr;
-      gap: 2.5rem;
-    }
-
-    .portal {
-      padding: 4rem 1.5rem;
-    }
-
-    .form-row {
-      grid-template-columns: 1fr;
-    }
-
-    footer {
-      flex-direction: column;
-      gap: 1rem;
-      text-align: center;
-    }
+    .hero { padding: 6rem 1.5rem 10rem; }
+    .hero-stats { bottom: 2rem; right: 1.5rem; gap: 1.5rem; }
+    .stat-num { font-size: 1.8rem; }
+    .trust-strip { padding: 1.5rem; }
+    .trust-inner { justify-content: center; }
+    .intro, .services-teaser, .risk-teaser, .about-teaser { padding: 4rem 1.5rem; }
+    .about-teaser-inner { grid-template-columns: 1fr; gap: 2rem; }
+    .credentials-mini { grid-template-columns: 1fr; }
+    .services-teaser-header { flex-direction: column; align-items: flex-start; }
   }
 </style>
 </head>
-
 <body>
 
+<!-- NAV -->
 <nav>
-  <div class="nav-logo">Marnfeld <span>Teknik & Rådgivning</span></div>
-
-  <button class="mobile-menu-toggle" type="button" aria-label="Åbn menu" aria-expanded="false">☰</button>
-
-  <ul class="nav-links">
-    <li><a href="#ydelser">Ydelser</a></li>
-    <li><a href="#risici">Risici</a></li>
-    <li><a href="#portal">Digital portal</a></li>
-    <li><a href="#om">Om os</a></li>
-    <li><a href="#kontakt">Kontakt</a></li>
+  <a href="index.html" class="nav-logo">Marnfeld <span>Teknik & Rådgivning</span></a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="ydelser.html">Ydelser</a></li>
+    <li><a href="risici.html">Risici</a></li>
+    <li><a href="portal.html">Digital portal</a></li>
+    <li><a href="om.html">Om os</a></li>
+    <li><a href="kontakt.html">Kontakt</a></li>
   </ul>
-
-  <button class="nav-cta" onclick="document.getElementById('kontakt').scrollIntoView({behavior:'smooth'})">
-    Book rådgivning
-  </button>
+  <button class="nav-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">&#9776;</button>
+  <a href="kontakt.html" class="nav-cta">Book rådgivning</a>
 </nav>
 
+<!-- HERO -->
 <section class="hero">
   <div class="hero-grid"></div>
-
   <div class="hero-content">
-    <div class="hero-eyebrow">Teknisk rådgivning & ejendomsservice</div>
-
-    <h1>Vi beskytter din ejendom –<br><em>før det går galt</em></h1>
-
-    <p>Uvildig teknisk rådgivning til ejendomsselskaber, ejerforeninger og andelsboligforeninger. Fra driftsplaner og miljøkortlægning til brandtætning og renoveringskontrol.</p>
-
-    <div class="hero-btns">
-      <a href="#kontakt" class="btn-primary">Book uforpligtende snak</a>
-      <a href="#ydelser" class="btn-outline">Se vores ydelser</a>
+    <div class="hero-eyebrow fade-up">Teknisk rådgivning & ejendomsservice</div>
+    <h1 class="fade-up-1">Vi finder fejlene,<br><em>før de bliver dyre</em></h1>
+    <p class="fade-up-2">Uvildig teknisk rådgivning til ejendomsselskaber, ejerforeninger og andelsboligforeninger. Vi arbejder med driftsplaner, miljøkortlægning, brandtætning og renoveringskontrol.</p>
+    <div class="hero-btns fade-up-3">
+      <a href="kontakt.html" class="btn-primary">Book uforpligtende snak</a>
+      <a href="ydelser.html" class="btn-outline">Se vores ydelser</a>
     </div>
   </div>
-
-  <div class="hero-stats">
+  <div class="hero-stats fade-up-4">
     <div class="stat">
       <span class="stat-num">35+</span>
       <span class="stat-label">Års erfaring</span>
     </div>
-
     <div class="stat">
       <span class="stat-num">500+</span>
       <span class="stat-label">Projekter</span>
     </div>
-
     <div class="stat">
       <span class="stat-num">100%</span>
       <span class="stat-label">Uvildig</span>
@@ -881,319 +350,190 @@
   </div>
 </section>
 
-<section class="services" id="ydelser">
-  <div class="services-header">
-    <div class="section-label">Hvad vi tilbyder</div>
-    <h2 class="section-title">Vores ydelser</h2>
-    <p class="section-sub">Vi tilbyder specialiseret teknisk rådgivning inden for alle aspekter af ejendomsdrift og renovering, altid uvildigt og med faglig integritet.</p>
+<!-- TRUST STRIP -->
+<section class="trust-strip">
+  <div class="trust-inner">
+    <div class="trust-item">Statsautoriseret gas- og vandmester</div>
+    <div class="trust-item">Brandrådgiver – brandklasse 2</div>
+    <div class="trust-item">Syns- og skønsmand</div>
+    <div class="trust-item">Ingen kommercielle bindinger</div>
   </div>
+</section>
 
-  <div class="services-grid">
-    <div class="service-card">
-      <span class="service-num">01</span>
-      <div class="service-icon">&#128196;</div>
+<!-- INTRO -->
+<section class="intro">
+  <div class="intro-inner">
+    <div class="section-label" style="justify-content:center;">Vores tilgang</div>
+    <p class="lead">Vi sælger ikke produkter. Vi anbefaler ikke løsninger fra venner. <em>Vores eneste interesse er, at ejendommen driftes klogt</em> – og at I undgår de regninger, der kommer, når småting bliver til store skader.</p>
+  </div>
+</section>
+
+<!-- YDELSER TEASER -->
+<section class="services-teaser">
+  <div class="services-teaser-header">
+    <div>
+      <div class="section-label">Hvad vi tilbyder</div>
+      <h2 class="section-title">Vores ydelser</h2>
+      <p class="section-sub">Specialiseret rådgivning til ejendomsdrift og renovering – fagligt funderet og uden bindinger.</p>
+    </div>
+    <a href="ydelser.html" class="btn-outline-dark">Se alle ydelser &#8594;</a>
+  </div>
+  <div class="services-teaser-grid">
+    <a href="ydelser.html#drift" class="teaser-card">
+      <span class="num">01</span>
+      <div class="teaser-icon">&#128196;</div>
       <h3>Drifts- og vedligeholdelsesplaner</h3>
-      <p>Mange ejendomme drives uden et samlet overblik over de tekniske installationer og deres tilstand. Det betyder, at vedligehold sker reaktivt, når noget går galt, frem for planmæssigt og budgetteret.</p>
-      <p style="margin-top:0.75rem;">Vi gennemgår ejendommens samlede tekniske installationer og udarbejder en struktureret drifts- og vedligeholdelsesplan, der beskriver tilstand, restlevetid, prioritering og estimerede omkostninger over en 5 til 10-årig horisont.</p>
-    </div>
-
-    <div class="service-card">
-      <span class="service-num">02</span>
-      <div class="service-icon">&#9881;</div>
-      <h3>Optimering af tekniske installationer</h3>
-      <p>Ældre installationer kører ofte langt under deres optimale effektivitet, enten fordi de er udtjente, forkert indregulerede eller ikke tilpasset ejendommens aktuelle behov.</p>
-      <p style="margin-top:0.75rem;">Vi gennemgår VVS-installationer, varmeanlæg, køl og isolering med fokus på at identificere optimeringspotentialer og konkrete besparelsesmuligheder.</p>
-    </div>
-
-    <div class="service-card">
-      <span class="service-num">03</span>
-      <div class="service-icon">&#127807;</div>
-      <h3>Miljøhåndtering og kortlægning</h3>
-      <p>I ældre ejendomme kan der være risiko for miljøfarlige materialer som asbest, PCB og bly. Disse materialer kræver særlig håndtering og korrekt dokumentation.</p>
-      <p style="margin-top:0.75rem;">Vi hjælper med kortlægning, rådgivning om anmeldelse til kommunen og sikrer, at arbejdet udføres korrekt efter gældende regler.</p>
-    </div>
-
-    <div class="service-card">
-      <span class="service-num">04</span>
-      <div class="service-icon">&#128293;</div>
-      <h3>Brandtætning og gennemføringer</h3>
-      <p>Når der laves nye installationer i en ejendom, skal gennemføringer i vægge og etageadskillelser brandtættes korrekt.</p>
-      <p style="margin-top:0.75rem;">Vi gennemgår installationsgennemføringer, dokumenterer mangler og rådgiver om udbedring, så sikkerhed og dokumentation er på plads.</p>
-    </div>
-
-    <div class="service-card">
-      <span class="service-num">05</span>
-      <div class="service-icon">&#128270;</div>
-      <h3>Uvildig rådgivning ved renovering</h3>
-      <p>En større renovering er ofte der, hvor skjulte skader, ulovlige installationer og fejl i udførelsen opdages.</p>
-      <p style="margin-top:0.75rem;">Vi bistår som uvildig teknisk rådgiver fra de indledende drøftelser til aflevering og slutopgør.</p>
-    </div>
-
-    <div class="service-card">
-      <span class="service-num">06</span>
-      <div class="service-icon">&#128706;</div>
+      <p>Overblik over installationer, restlevetid og estimerede omkostninger over de næste 5-10 år.</p>
+      <span class="arrow">Læs mere &#8594;</span>
+    </a>
+    <a href="ydelser.html#optimering" class="teaser-card">
+      <span class="num">02</span>
+      <div class="teaser-icon">&#9881;</div>
+      <h3>Optimering af installationer</h3>
+      <p>VVS, varme, køl og isolering – find besparelserne før der skal renoveres for alvor.</p>
+      <span class="arrow">Læs mere &#8594;</span>
+    </a>
+    <a href="ydelser.html#miljoe" class="teaser-card">
+      <span class="num">03</span>
+      <div class="teaser-icon">&#127807;</div>
+      <h3>Miljøhåndtering</h3>
+      <p>Kortlægning af asbest, PCB og bly – og korrekt anmeldelse, før arbejdet sættes i gang.</p>
+      <span class="arrow">Læs mere &#8594;</span>
+    </a>
+    <a href="ydelser.html#brand" class="teaser-card">
+      <span class="num">04</span>
+      <div class="teaser-icon">&#128293;</div>
+      <h3>Brandtætning</h3>
+      <p>Systematisk gennemgang af gennemføringer, dokumentation og anbefalinger til udbedring.</p>
+      <span class="arrow">Læs mere &#8594;</span>
+    </a>
+    <a href="ydelser.html#renovering" class="teaser-card">
+      <span class="num">05</span>
+      <div class="teaser-icon">&#128270;</div>
+      <h3>Uvildig renoveringsrådgivning</h3>
+      <p>Fra udbudsmateriale til slutopgør. Vi kontrollerer, at det udførte arbejde holder.</p>
+      <span class="arrow">Læs mere &#8594;</span>
+    </a>
+    <a href="ydelser.html#kontrol" class="teaser-card">
+      <span class="num">06</span>
+      <div class="teaser-icon">&#128706;</div>
       <h3>Kontrol ved lejlighedsrenovering</h3>
-      <p>Når beboere renoverer badeværelse eller køkken, er det vigtigt, at tekniske krav, vådrumssikring og autoriseret arbejde er dokumenteret.</p>
-      <p style="margin-top:0.75rem;">Vi hjælper bestyrelsen med krav, kontrol og dokumentation, så skader og konflikter forebygges.</p>
+      <p>Hjælp til bestyrelsen med at stille krav, kontrollere arbejdet og sikre dokumentationen.</p>
+      <span class="arrow">Læs mere &#8594;</span>
+    </a>
+  </div>
+</section>
+
+<!-- RISK TEASER -->
+<section class="risk-teaser">
+  <div class="risk-teaser-inner">
+    <div class="risk-teaser-header">
+      <div class="section-label" style="justify-content:center; color:var(--gold);">Konsekvenser ved manglende handling</div>
+      <h2 class="section-title light">Hvad koster det <em>ikke</em> at handle?</h2>
+      <p class="section-sub light">Tre eksempler, vi støder på igen og igen. Alle kunne være undgået med rettidig rådgivning.</p>
+    </div>
+    <div class="risk-grid">
+      <div class="risk-card">
+        <div class="risk-tag">Brand</div>
+        <h3>Forkert brandtætning</h3>
+        <p>Ny rørgennemføring uden korrekt brandtætning. Ved brand spreder røg sig til overliggende etager på minutter. Forsikringen dækker ikke.</p>
+      </div>
+      <div class="risk-card">
+        <div class="risk-tag">Vådrum</div>
+        <h3>Badeværelse uden membran</h3>
+        <p>Renovering uden vådrumssikring. Efter to år siver der vand ned i lejligheden nedenunder. Skader for 150–500.000 kr.</p>
+      </div>
+      <div class="risk-card">
+        <div class="risk-tag">Miljø</div>
+        <h3>Asbest spredt i ejendommen</h3>
+        <p>Renovering startes uden kortlægning. Asbestfibre spredes i hele ejendommen. Arbejdstilsynet stopper projektet.</p>
+      </div>
+    </div>
+    <div class="risk-cta">
+      <a href="risici.html" class="btn-outline">Se alle scenarier &#8594;</a>
     </div>
   </div>
 </section>
 
-<section class="scenarios" id="risici">
-  <div class="scenarios-header">
-    <div class="section-label" style="color:var(--gold)">Konsekvenser ved manglende handling</div>
-    <h2 class="section-title light">Hvad koster det<br><em style="font-style:italic;color:var(--gold)">ikke</em> at handle?</h2>
-    <p class="section-sub light">Virkelige scenarier vi ser igen og igen, og som kan undgås med den rette rådgivning i tide.</p>
-  </div>
-
-  <div class="scenarios-grid">
-    <div class="scenario-card">
-      <div class="scenario-tag">Brand</div>
-      <h3>Forkert brandtætning kan få alvorlige konsekvenser</h3>
-      <p>Håndværker laver ny rørgennemføring uden korrekt brandtætning. Ved brand kan røg og flammer sprede sig hurtigere gennem ejendommen.</p>
-      <div class="scenario-consequence">
-        <p>Personskade · Forsikringsdækning kan blive udfordret · Ansvarsspørgsmål for bestyrelsen</p>
-      </div>
-    </div>
-
-    <div class="scenario-card">
-      <div class="scenario-tag">Vådrum</div>
-      <h3>Badeværelse uden korrekt membran</h3>
-      <p>Beboer renoverer badeværelse uden korrekt vådrumssikring. Efter få år kan vand sive ned i lejligheden nedenunder.</p>
-      <div class="scenario-consequence">
-        <p>Skader for 150.000 til 500.000 kr. · Risiko for afvist eller begrænset dækning · Juridisk tvist</p>
-      </div>
-    </div>
-
-    <div class="scenario-card">
-      <div class="scenario-tag">Miljø</div>
-      <h3>Asbest opdages for sent</h3>
-      <p>Renovering igangsættes uden forudgående kortlægning. Miljøfarlige materialer opdages først under arbejdet.</p>
-      <div class="scenario-consequence">
-        <p>Projektstop · Ekstraomkostninger · Risiko for eksponering af beboere og håndværkere</p>
-      </div>
-    </div>
-
-    <div class="scenario-card">
-      <div class="scenario-tag">Vedligehold</div>
-      <h3>Forsømt varmeanlæg</h3>
-      <p>Varmecentralen er ikke efterset i flere år. En kritisk komponent svigter midt om vinteren.</p>
-      <div class="scenario-consequence">
-        <p>Akut reparation kan koste flere gange mere · Driftsstop · Utilfredse beboere</p>
-      </div>
-    </div>
-
-    <div class="scenario-card">
-      <div class="scenario-tag">Lækage</div>
-      <h3>Vaskemaskine uden lækagesikring</h3>
-      <p>En vaskemaskine installeres uden korrekt lækagesikring. En slange springer, og vand løber ned i underliggende lejlighed.</p>
-      <div class="scenario-consequence">
-        <p>Vandskade · Manglende dokumentation kan skabe problemer med forsikringen</p>
-      </div>
-    </div>
-
-    <div class="scenario-card">
-      <div class="scenario-tag">Renovering</div>
-      <h3>Ulovlige installationer opdages for sent</h3>
-      <p>Foreningen godkender renovering uden teknisk kontrol. Mangler opdages først ved salg eller efterfølgende skade.</p>
-      <div class="scenario-consequence">
-        <p>Forsinket salg · Prisnedslag · Konflikt mellem beboer og forening</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="about" id="om">
-  <div class="about-inner">
-    <div class="about-img">
-      <span class="about-img-placeholder">Foto</span>
+<!-- ABOUT TEASER -->
+<section class="about-teaser">
+  <div class="about-teaser-inner">
+    <div class="about-teaser-img">
       <div class="about-img-name">
         <strong>René Marnfeld</strong>
         <span>Stifter & chefrådgiver</span>
       </div>
     </div>
-
-    <div class="about-content">
-      <div class="section-label">Om os</div>
-      <h2 class="section-title">Faglig tyngde.<br>Uvildigt blik.</h2>
-
+    <div class="about-teaser-content">
+      <div class="section-label">Om René</div>
+      <h2 class="section-title">35 års erfaring –<br><em>uden bindinger</em></h2>
       <p>Marnfeld Teknik & Rådgivning er stiftet af René Marnfeld, statsautoriseret gas- og vandmester med over 35 års erfaring inden for VVS, tekniske installationer, brand og projektledelse.</p>
-
-      <p>Som uddannet syns- og skønsmand og brandrådgiver har René en stærk kombination af praktisk håndværksmæssig erfaring og juridisk-teknisk vurderingsevne.</p>
-
-      <p>Vi arbejder udelukkende som uvildige rådgivere. Vi sælger ikke produkter og har ingen kommercielle interesser i de løsninger, vi anbefaler.</p>
-
-      <div class="credentials">
-        <div class="credential">Statsautoriseret gas- og vandmester</div>
-        <div class="credential">Brandrådgiver, brandklasse 2</div>
-        <div class="credential">Syns- og skønsmand</div>
-        <div class="credential">Over 35 års erfaring i branchen</div>
-        <div class="credential">Tidligere projektchef for større byggeprojekter</div>
+      <p>Vi arbejder udelukkende som uvildige rådgivere. Vi sælger ingen produkter og har ingen kommercielle interesser i de løsninger, vi anbefaler.</p>
+      <div class="credentials-mini">
+        <div class="credential-mini">Statsautoriseret gas- og vandmester</div>
+        <div class="credential-mini">Brandrådgiver – brandklasse 2</div>
+        <div class="credential-mini">Syns- og skønsmand</div>
+        <div class="credential-mini">Tidligere projektchef</div>
       </div>
+      <a href="om.html" class="btn-outline-dark">Læs mere om René &#8594;</a>
     </div>
   </div>
 </section>
 
-<section class="portal" id="portal">
-  <div class="portal-inner">
-    <div>
-      <div class="section-label">Digital dokumentation</div>
-      <h2 class="section-title">Alt samlet ét sted –<br><em style="font-style:italic; color:var(--gold)">transparent og sporbart</em></h2>
-
-      <p style="font-size:1rem; color:var(--text-muted); line-height:1.85; font-weight:300; margin-bottom:1.5rem;">Vi arbejder digitalt og struktureret. Alle rapporter, anbefalinger, ændringsforslag og dokumentation uploades løbende til en digital portal, så bestyrelsen, ejendomsadministratoren og øvrige parter altid har adgang til det seneste.</p>
-
-      <p style="font-size:1rem; color:var(--text-muted); line-height:1.85; font-weight:300; margin-bottom:2rem;">Vi anvender anerkendte platforme som <strong style="color:var(--navy);">Dalux</strong> og tilsvarende digitale bygningsplatforme, der er velkendte i byggebranchen.</p>
-
-      <div style="display:flex; flex-direction:column; gap:0.75rem; margin-top:1.5rem;">
-        <div style="display:flex; align-items:flex-start; gap:14px;">
-          <div style="width:6px; height:6px; background:var(--gold); flex-shrink:0; transform:rotate(45deg); margin-top:6px;"></div>
-          <p style="font-size:0.9rem; color:var(--text-muted); margin:0; line-height:1.7;"><strong style="color:var(--navy);">Ændringsforslag og bemærkninger</strong> registreres med billeder, placering og prioritet.</p>
-        </div>
-
-        <div style="display:flex; align-items:flex-start; gap:14px;">
-          <div style="width:6px; height:6px; background:var(--gold); flex-shrink:0; transform:rotate(45deg); margin-top:6px;"></div>
-          <p style="font-size:0.9rem; color:var(--text-muted); margin:0; line-height:1.7;"><strong style="color:var(--navy);">Statusopdateringer i realtid</strong> gør det lettere at følge fremdriften.</p>
-        </div>
-
-        <div style="display:flex; align-items:flex-start; gap:14px;">
-          <div style="width:6px; height:6px; background:var(--gold); flex-shrink:0; transform:rotate(45deg); margin-top:6px;"></div>
-          <p style="font-size:0.9rem; color:var(--text-muted); margin:0; line-height:1.7;"><strong style="color:var(--navy);">Fuld dokumentation og sporbarhed</strong> sikrer et bedre grundlag, hvis der senere opstår tvivl eller tvist.</p>
-        </div>
-      </div>
-    </div>
-
-    <div style="background:var(--navy); padding:3rem; position:relative; overflow:hidden;">
-      <div style="font-family:'Playfair Display', serif; font-size:0.8rem; color:var(--gold); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:1.5rem;">Sådan fungerer det</div>
-
-      <div style="display:flex; flex-direction:column; gap:1.5rem;">
-        <div style="display:flex; gap:1rem; align-items:flex-start;">
-          <div style="width:32px; height:32px; border:1px solid rgba(200,169,110,0.4); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-family:'Playfair Display',serif; color:var(--gold); font-size:0.9rem;">01</div>
-          <div>
-            <p style="font-size:0.88rem; font-weight:500; color:var(--white); margin:0 0 4px;">Gennemgang på ejendommen</p>
-            <p style="font-size:0.82rem; color:rgba(255,255,255,0.45); margin:0; line-height:1.6;">Vi gennemgår ejendommen og registrerer observationer med billeder og beskrivelser.</p>
-          </div>
-        </div>
-
-        <div style="display:flex; gap:1rem; align-items:flex-start;">
-          <div style="width:32px; height:32px; border:1px solid rgba(200,169,110,0.4); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-family:'Playfair Display',serif; color:var(--gold); font-size:0.9rem;">02</div>
-          <div>
-            <p style="font-size:0.88rem; font-weight:500; color:var(--white); margin:0 0 4px;">Upload til digital portal</p>
-            <p style="font-size:0.82rem; color:rgba(255,255,255,0.45); margin:0; line-height:1.6;">Alle fund, rapporter og anbefalinger uploades struktureret til en digital platform.</p>
-          </div>
-        </div>
-
-        <div style="display:flex; gap:1rem; align-items:flex-start;">
-          <div style="width:32px; height:32px; border:1px solid rgba(200,169,110,0.4); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-family:'Playfair Display',serif; color:var(--gold); font-size:0.9rem;">03</div>
-          <div>
-            <p style="font-size:0.88rem; font-weight:500; color:var(--white); margin:0 0 4px;">Prioritering og handlingsplan</p>
-            <p style="font-size:0.82rem; color:rgba(255,255,255,0.45); margin:0; line-height:1.6;">Vi prioriterer fundene og udarbejder en konkret handlingsplan.</p>
-          </div>
-        </div>
-
-        <div style="display:flex; gap:1rem; align-items:flex-start;">
-          <div style="width:32px; height:32px; border:1px solid rgba(200,169,110,0.4); display:flex; align-items:center; justify-content:center; flex-shrink:0; font-family:'Playfair Display',serif; color:var(--gold); font-size:0.9rem;">04</div>
-          <div>
-            <p style="font-size:0.88rem; font-weight:500; color:var(--white); margin:0 0 4px;">Løbende opfølgning</p>
-            <p style="font-size:0.82rem; color:rgba(255,255,255,0.45); margin:0; line-height:1.6;">Portalen holdes opdateret gennem hele forløbet.</p>
-          </div>
-        </div>
-      </div>
+<!-- CTA -->
+<section class="cta-section">
+  <div class="cta-inner">
+    <div class="section-label" style="justify-content:center; color:var(--gold);">Kom i gang</div>
+    <h2>Hvad skal vi <em>tage hånd om</em> for jer?</h2>
+    <p>Vi starter altid med en gratis samtale, hvor vi hører om jeres situation og vurderer, om vi kan hjælpe. Ingen forpligtelse, ingen salgstale.</p>
+    <div class="cta-btns">
+      <a href="kontakt.html" class="btn-primary">Book uforpligtende snak</a>
+      <a href="tel:+4527129021" class="btn-outline">Ring 27 12 90 21</a>
     </div>
   </div>
 </section>
 
-<section class="contact" id="kontakt">
-  <div class="contact-inner">
-    <div class="contact-info">
-      <div class="section-label" style="color:var(--gold)">Kom i gang</div>
-      <h2 class="section-title light">Book en uforpligtende snak</h2>
-      <p>Vi starter altid med en gratis indledende samtale, hvor vi lytter til jeres udfordringer og vurderer, om vi kan hjælpe.</p>
-
-      <div class="contact-detail">
-        <div class="contact-detail-icon">&#128222;</div>
-        <a href="tel:+4527129021">27 12 90 21</a>
-      </div>
-
-      <div class="contact-detail">
-        <div class="contact-detail-icon">&#128140;</div>
-        <a href="mailto:marnfeld@outlook.dk">marnfeld@outlook.dk</a>
-      </div>
-
-      <div class="contact-detail">
-        <div class="contact-detail-icon">&#128205;</div>
-        <span>Hele Danmark</span>
-      </div>
-    </div>
-
-    <form class="contact-form" action="https://formspree.io/f/INDSAET_FORM_ID_HER" method="POST">
-      <input type="hidden" name="_subject" value="Ny henvendelse fra Marnfeld Teknik & Rådgivning">
-      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-
-      <div class="form-row">
-        <div class="form-group">
-          <label for="navn">Navn</label>
-          <input id="navn" name="navn" type="text" placeholder="Dit navn" autocomplete="name" required>
-        </div>
-
-        <div class="form-group">
-          <label for="telefon">Telefon</label>
-          <input id="telefon" name="telefon" type="tel" placeholder="+45 00 00 00 00" autocomplete="tel" required>
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="email">E-mail</label>
-        <input id="email" name="email" type="email" placeholder="din@email.dk" autocomplete="email" required>
-      </div>
-
-      <div class="form-group">
-        <label for="type">Jeg repræsenterer</label>
-        <select id="type" name="type" required>
-          <option value="">Vælg type...</option>
-          <option value="Ejendomsselskab">Ejendomsselskab</option>
-          <option value="Ejerforening">Ejerforening</option>
-          <option value="Andelsboligforening">Andelsboligforening</option>
-          <option value="Privat boligejer">Privat boligejer</option>
-          <option value="Andet">Andet</option>
-        </select>
-      </div>
-
-      <div class="form-group">
-        <label for="besked">Beskriv jeres udfordring</label>
-        <textarea id="besked" name="besked" rows="4" placeholder="Fortæl kort om hvad I har brug for hjælp til..." required></textarea>
-      </div>
-
-      <button type="submit" class="form-submit">Send besked &#8594;</button>
-    </form>
-  </div>
-</section>
-
+<!-- FOOTER -->
 <footer>
-  <div class="footer-logo">Marnfeld <span>Teknik & Rådgivning</span></div>
-  <p>CVR: 44081040 &nbsp;·&nbsp; Hele Danmark &nbsp;·&nbsp; 27 12 90 21</p>
-  <p>&copy; 2026 Marnfeld Teknik & Rådgivning</p>
+  <div class="footer-top">
+    <div class="footer-col footer-brand">
+      <div class="footer-logo">Marnfeld <span>Teknik & Rådgivning</span></div>
+      <p>Uvildig teknisk rådgivning til ejendomsselskaber, ejer- og andelsboligforeninger i hele Danmark.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Ydelser</h4>
+      <ul>
+        <li><a href="ydelser.html#drift">Drifts- og vedligeholdelsesplaner</a></li>
+        <li><a href="ydelser.html#optimering">Optimering af installationer</a></li>
+        <li><a href="ydelser.html#miljoe">Miljøhåndtering</a></li>
+        <li><a href="ydelser.html#brand">Brandtætning</a></li>
+        <li><a href="ydelser.html#renovering">Renoveringsrådgivning</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Virksomheden</h4>
+      <ul>
+        <li><a href="om.html">Om os</a></li>
+        <li><a href="risici.html">Risici & scenarier</a></li>
+        <li><a href="portal.html">Digital portal</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Kontakt</h4>
+      <ul>
+        <li><a href="tel:+4527129021">27 12 90 21</a></li>
+        <li><a href="mailto:marnfeld@outlook.dk">marnfeld@outlook.dk</a></li>
+        <li>Hele Danmark</li>
+        <li>CVR: 44081040</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>&copy; 2026 Marnfeld Teknik & Rådgivning</p>
+    <p>CVR: 44081040</p>
+  </div>
 </footer>
-
-<script>
-  const menuToggle = document.querySelector('.mobile-menu-toggle');
-  const navLinks = document.querySelector('.nav-links');
-
-  if (menuToggle && navLinks) {
-    menuToggle.addEventListener('click', () => {
-      const isOpen = navLinks.classList.toggle('open');
-      menuToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-      menuToggle.textContent = isOpen ? '×' : '☰';
-    });
-
-    navLinks.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        navLinks.classList.remove('open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        menuToggle.textContent = '☰';
-      });
-    });
-  }
-</script>
 
 </body>
 </html>
